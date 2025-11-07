@@ -2,6 +2,6 @@
 
 {
   "crons": [
-    { "path": "/api/cron/auto-punch-out", "schedule": "59 23 * * *" }  // daily
+    { "path": "/api/cron/auto-out", "schedule": "59 23 * * *" }  // daily
   ]
 }
