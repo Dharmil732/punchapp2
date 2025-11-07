@@ -1,0 +1,1 @@
+import { serverAdmin } from '@/lib/serverAdmin'; export async function POST(req){ const sb=serverAdmin(); const body=await req.json(); const {data,error}=await sb.from('task_comments').insert(body).select(); if(error) return Response.json({ok:false,error:error.message},{status:500}); return Response.json({ok:true,data}); }

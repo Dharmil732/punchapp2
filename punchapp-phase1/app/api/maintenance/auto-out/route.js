@@ -1,0 +1,1 @@
+import { serverAdmin } from '@/lib/serverAdmin'; export async function POST(){ const sb=serverAdmin(); const { error } = await sb.rpc('auto_punch_out_midnight'); if (error) return Response.json({ ok:false, error:error.message }, { status:500 }); return Response.json({ ok:true }); }

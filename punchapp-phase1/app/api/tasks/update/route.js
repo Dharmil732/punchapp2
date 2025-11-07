@@ -1,0 +1,1 @@
+import { serverAdmin } from '@/lib/serverAdmin'; export async function POST(req){ const sb=serverAdmin(); const body=await req.json(); const {id,...fields}=body; const {data,error}=await sb.from('tasks').update(fields).eq('id',id).select(); if(error) return Response.json({ok:false,error:error.message},{status:500}); return Response.json({ok:true,data}); }

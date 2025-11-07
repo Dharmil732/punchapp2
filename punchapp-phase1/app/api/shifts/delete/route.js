@@ -1,0 +1,1 @@
+import { serverAdmin } from '@/lib/serverAdmin'; export async function POST(req){ const sb=serverAdmin(); const {id}=await req.json(); const {error}=await sb.from('shifts').delete().eq('id',id); if(error) return Response.json({ok:false,error:error.message},{status:500}); return Response.json({ok:true}); }

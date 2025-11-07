@@ -1,0 +1,1 @@
+import { serverAdmin } from '@/lib/serverAdmin'; export async function POST(req){ const sb=serverAdmin(); const body=await req.json(); for(const [key,value] of Object.entries(body||{})){ await sb.from('settings').upsert({ key, value, updated_at: new Date().toISOString() }); } return Response.json({ok:true}); }

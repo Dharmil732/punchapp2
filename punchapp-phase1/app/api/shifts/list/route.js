@@ -1,0 +1,1 @@
+import { serverAdmin } from '@/lib/serverAdmin'; export async function GET(){ const sb=serverAdmin(); const {data,error}=await sb.from('shifts').select('*').order('start_at',{ascending:true}).limit(5000); if(error) return Response.json({ok:false,error:error.message},{status:500}); return Response.json({ok:true,data}); }

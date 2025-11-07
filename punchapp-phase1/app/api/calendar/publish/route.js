@@ -1,0 +1,1 @@
+import { calendarPublish } from '@/lib/google'; export async function POST(req){ const { events } = await req.json(); const res = await calendarPublish(events||[]); if (!res.ok) return Response.json({ ok:false, error: res.error||'Calendar publish failed' }, { status: 500 }); return Response.json({ ok:true, count: res.count }); }

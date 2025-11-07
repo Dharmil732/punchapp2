@@ -1,0 +1,1 @@
+import { serverAdmin } from '@/lib/serverAdmin'; export async function POST(req){ const sb=serverAdmin(); const {ids,decision,note}=await req.json(); const {data,error}=await sb.rpc('batch_decide_shift_requests',{p_ids:ids,p_decision:decision,p_note:note}); if(error) return Response.json({ok:false,error:error.message},{status:500}); return Response.json({ok:true,data}); }

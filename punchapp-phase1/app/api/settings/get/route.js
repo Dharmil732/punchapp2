@@ -1,0 +1,1 @@
+import { serverAdmin } from '@/lib/serverAdmin'; export async function GET(){ const sb=serverAdmin(); const keys=['overtime','paid_scheduled_hours_only','break_rules','geo_policy']; const out={}; for(const k of keys){ const {data}=await sb.from('settings').select('value').eq('key',k).maybeSingle(); out[k]=data?.value||null; } return Response.json({ok:true,settings:out}); }

@@ -1,0 +1,9 @@
+
+{
+  "crons": [
+    { "path": "/api/maintenance/auto-out", "schedule": "5 0 * * *" },
+    { "path": "/api/cron/reminders", "schedule": "*/15 * * * *" },
+    { "path": "/api/cron/payroll", "schedule": "0 8 * * MON" },
+    { "path": "/api/cron/backup", "schedule": "0 3 * * SUN" }
+  ]
+}

@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+:root { color-scheme: dark; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; }
+input, select, textarea {
+  background: #0a0a0a; color: #fff; border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px; padding: .75rem 1rem;
+}
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .6rem .75rem; border-bottom: 1px solid rgba(255,255,255,.08); text-align: left; }
+th { font-weight: 600; opacity: .9; }
+.bg-card { background: #0b0b0b; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; }
+.text-muted { opacity: .7; }
