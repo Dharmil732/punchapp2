@@ -1,6 +1,5 @@
 {
   "crons": [
     { "path": "/api/maintenance/auto-out", "schedule": "5 0 * * *" },
-    { "path": "/api/cron/backup", "schedule": "0 3 * * SUN" }
   ]
 }
